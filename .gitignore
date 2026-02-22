@@ -1,0 +1,35 @@
+# Ignore OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ignore editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore test coverage
+coverage/
+*.coverage
+phpunit.xml
+.phpunit.result.cache
+
+# Ignore build artifacts
+dist/
+build/
+*.zip
+
+# Ignore node_modules (if any frontend assets added later)
+node_modules/
+
+# Ignore composer files (if added later)
+vendor/
+composer.lock
