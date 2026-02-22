@@ -206,108 +206,94 @@ class Claude_HtmlFormatter {
      * @return string CSS styles.
      */
     public function get_css(): string {
-        return <<<CSS
-<style>
-.claude-conversation {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    line-height: 1.6;
-    color: #333;
-}
-
-.claude-metadata {
-    background: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 15px;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-.claude-meta-item {
-    margin-bottom: 5px;
-}
-
-.claude-meta-item:last-child {
-    margin-bottom: 0;
-}
-
-.claude-msg-user {
-    border-left: 4px solid #2271b1;
-    background: #f0f6fc;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 0 4px 4px 0;
-}
-
-.claude-msg-assistant {
-    border-left: 4px solid #00a32a;
-    background: #edfaef;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 0 4px 4px 0;
-}
-
-.claude-msg-role {
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #666;
-    margin-bottom: 8px;
-}
-
-.claude-msg-content {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-
-.claude-thinking {
-    background: #fff8e5;
-    border: 1px solid #ffb900;
-    border-left: 4px solid #ffb900;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 4px;
-    font-style: italic;
-}
-
-.claude-thinking-icon {
-    font-size: 1.2em;
-}
-
-.claude-thinking-content {
-    margin-top: 10px;
-}
-
-.claude-code,
-.claude-conversation pre {
-    background: #282c34;
-    color: #abb2bf;
-    padding: 15px;
-    border-radius: 4px;
-    overflow-x: auto;
-    font-family: "Fira Code", "Consolas", "Monaco", monospace;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.claude-conversation pre code {
-    background: transparent;
-    padding: 0;
-    color: inherit;
-}
-
-.claude-inline-code {
-    background: #f0f0f0;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-family: "Fira Code", "Consolas", "Monaco", monospace;
-    font-size: 0.9em;
-    color: #c7254e;
-}
-</style>
-CSS;
+        $css = '<style>';
+        $css .= '.claude-conversation {';
+        $css .= '    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;';
+        $css .= '    max-width: 800px;';
+        $css .= '    margin: 0 auto;';
+        $css .= '    padding: 20px;';
+        $css .= '    line-height: 1.6;';
+        $css .= '    color: #333;';
+        $css .= '}';
+        $css .= '.claude-metadata {';
+        $css .= '    background: #f5f5f5;';
+        $css .= '    border: 1px solid #ddd;';
+        $css .= '    border-radius: 4px;';
+        $css .= '    padding: 15px;';
+        $css .= '    margin-bottom: 20px;';
+        $css .= '    font-size: 14px;';
+        $css .= '}';
+        $css .= '.claude-meta-item {';
+        $css .= '    margin-bottom: 5px;';
+        $css .= '}';
+        $css .= '.claude-meta-item:last-child {';
+        $css .= '    margin-bottom: 0;';
+        $css .= '}';
+        $css .= '.claude-msg-user {';
+        $css .= '    border-left: 4px solid #2271b1;';
+        $css .= '    background: #f0f6fc;';
+        $css .= '    padding: 15px;';
+        $css .= '    margin-bottom: 15px;';
+        $css .= '    border-radius: 0 4px 4px 0;';
+        $css .= '}';
+        $css .= '.claude-msg-assistant {';
+        $css .= '    border-left: 4px solid #00a32a;';
+        $css .= '    background: #edfaef;';
+        $css .= '    padding: 15px;';
+        $css .= '    margin-bottom: 15px;';
+        $css .= '    border-radius: 0 4px 4px 0;';
+        $css .= '}';
+        $css .= '.claude-msg-role {';
+        $css .= '    font-weight: bold;';
+        $css .= '    font-size: 12px;';
+        $css .= '    text-transform: uppercase;';
+        $css .= '    color: #666;';
+        $css .= '    margin-bottom: 8px;';
+        $css .= '}';
+        $css .= '.claude-msg-content {';
+        $css .= '    white-space: pre-wrap;';
+        $css .= '    word-wrap: break-word;';
+        $css .= '}';
+        $css .= '.claude-thinking {';
+        $css .= '    background: #fff8e5;';
+        $css .= '    border: 1px solid #ffb900;';
+        $css .= '    border-left: 4px solid #ffb900;';
+        $css .= '    padding: 15px;';
+        $css .= '    margin: 15px 0;';
+        $css .= '    border-radius: 4px;';
+        $css .= '    font-style: italic;';
+        $css .= '}';
+        $css .= '.claude-thinking-icon {';
+        $css .= '    font-size: 1.2em;';
+        $css .= '}';
+        $css .= '.claude-thinking-content {';
+        $css .= '    margin-top: 10px;';
+        $css .= '}';
+        $css .= '.claude-code,';
+        $css .= '.claude-conversation pre {';
+        $css .= '    background: #282c34;';
+        $css .= '    color: #abb2bf;';
+        $css .= '    padding: 15px;';
+        $css .= '    border-radius: 4px;';
+        $css .= '    overflow-x: auto;';
+        $css .= '    font-family: "Fira Code", "Consolas", "Monaco", monospace;';
+        $css .= '    font-size: 14px;';
+        $css .= '    line-height: 1.5;';
+        $css .= '}';
+        $css .= '.claude-conversation pre code {';
+        $css .= '    background: transparent;';
+        $css .= '    padding: 0;';
+        $css .= '    color: inherit;';
+        $css .= '}';
+        $css .= '.claude-inline-code {';
+        $css .= '    background: #f0f0f0;';
+        $css .= '    padding: 2px 6px;';
+        $css .= '    border-radius: 3px;';
+        $css .= '    font-family: "Fira Code", "Consolas", "Monaco", monospace;';
+        $css .= '    font-size: 0.9em;';
+        $css .= '    color: #c7254e;';
+        $css .= '}';
+        $css .= '</style>';
+        return $css;
     }
 }

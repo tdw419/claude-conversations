@@ -1,9 +1,17 @@
 <?php
 /**
  * Plugin Name: Claude Conversations
+ * Plugin URI: https://wordpress.org/plugins/claude-conversations/
  * Description: Import Claude Code CLI conversations from ~/.claude/projects/ into WordPress as formatted posts with syntax highlighting
  * Version: 1.0.0
  * Author: Geometry OS
+ * Author URI: https://geometryos.com
+ * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: claude-conversations
+ * Domain Path: /languages
+ * Requires at least: 6.0
+ * Requires PHP: 8.0
  *
  * This plugin imports Claude Code CLI conversation sessions (JSONL format)
  * into WordPress posts with:
